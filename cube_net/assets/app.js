@@ -30,8 +30,8 @@ window.onload = () => {
             const args = [alg.value, parseInt(cubeSize.value)||3, "#cube-container", [parseInt(width.value),parseInt(height.value)||null],bgcolor.value];
             const command = `<html>
     <head>
-        <script src="https://filipeteixeira.com.br/cubenet/js/Cube.js"><\/script>
-        <script src="https://filipeteixeira.com.br/cubenet/js/Renderer.js"><\/script>
+        <script src="https://shuantsu.github.io/ft_cube/cube_net/assets/Cube.js"><\/script>
+        <script src="https://shuantsu.github.io/ft_cube/cube_net/assets/Renderer.js"><\/script>
         <style>
             #cube-container {
                 background: ${args[4]};
