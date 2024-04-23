@@ -1,0 +1,53 @@
+body {
+    background-color: #333;
+    color: white;
+    font-family: sans-serif;
+}
+#cube-container {
+    background:black;
+    padding:30px;
+    display: inline-block;
+    border-radius: 10px;
+}
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 450px;
+}
+td {
+    padding: 10px;
+    border: 1px solid;
+}
+input {
+    width: 100%;
+}
+#output, #output-label {
+    cursor: pointer;
+}
+#output-container {
+    transition: .4s all;
+    overflow-x: hidden;
+}
+#output {
+    background: black;
+    color: rgb(42, 160, 42);
+    padding: 20px;
+    padding-top: 30px;
+    overflow-x: auto;
+}
+.copied {
+    opacity: .5;
+    transform: translateY(20px);
+}
+.flex {
+    display: flex;
+    gap: 30px;
+}
+.col2 {
+    position:relative;
+    flex:1;
+}
+.col2 span {
+    position: absolute;
+    top: 20px;
+}

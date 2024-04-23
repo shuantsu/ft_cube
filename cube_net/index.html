@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filipe Teixeira's Cube Net Generator</title>
+    <script src="assets/Cube.js"></script>
+    <script src="assets/Renderer.js"></script>
+	<script src="assets/app.js"></script>
+    <link rel="stylesheet" href="assets/style.css"/>
+    <link rel="shortcut icon" sizes="192x192" href="icons/android-chrome-192x192.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" /> 
+    <link rel="icon" href="icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="icons/favicon-16x16.png" sizes="16x16" />
+</head>
+<body>
+    <h1>Filipe Teixeira's Cube Net Generator &copy 2023</h1>
+    <div class="flex">
+        <div>
+            <div id="cube-container"></div>
+            <table class="col1">
+                <tr><td>CubeSize:</td><td><input min="1" id="cubeSize" type="number" value="3"/></td></tr>
+                <tr><td>Alg:</td><td><input id="alg" value="" /><br/></td></tr>
+                <tr><td>Width:</td><td><input id="width" value="600" type="number"/></td></tr>
+                <tr><td>Height:</td><td><input id="height" type="number"/></td></tr>
+                <tr><td>Padding:</td><td><input min="0" id="margin" type="number" value="20"/></td></tr>
+                <tr><td>Bgcolor:</td><td><input id="bgcolor" type="color"/></td></tr>
+            </table>
+        </div>
+        <div id="output-container" class="col2">
+            <span id="output-label">(Click code to copy)</span>
+            <pre id="output"></pre>
+        </div>
+    </div>
+</body>
+</html>

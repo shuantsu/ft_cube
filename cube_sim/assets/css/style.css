@@ -1,0 +1,107 @@
+#hud {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    padding-left: 20px;
+    color: white;
+}
+#data-inputs {
+    position:absolute;
+    bottom:0;
+    right:0;
+    color:white;
+}
+#mov {
+    display:inline-block;margin-right:10px
+}
+#alg {
+    color:cyan;
+}
+
+:root {
+    --cubeBorder: 2px;
+    --cubeColor: black;
+    --negCubeBorder: calc(var(--cubeBorder)*-1);
+}
+
+body {
+    background-color: rgb(68, 68, 68);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    font-family: roboto;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width:100%;
+    height:100%;
+}
+
+* {
+    transition: .12s all;
+}
+
+#cube-container table td {
+    text-align: center;
+    line-height: var(--size);
+    box-shadow: inset var(--cubeBorder) var(--cubeBorder) 0 var(--cubeColor), inset var(--negCubeBorder) var(--negCubeBorder) 0 var(--cubeColor);
+}
+
+#cube-perspective {
+    perspective: 50000px;
+}
+
+:root {
+    --cubeDimension: 400px;
+}
+
+#cube-container {
+    width: var(--cubeDimension);
+    height: var(--cubeDimension);
+    position: relative;
+    top: calc(50% - calc(var(--cubeDimension)/2)); /* Centering the cube vertically */
+    left: calc(50% - calc(var(--cubeDimension)/2)); /* Centering the cube horizontally */
+    transform-style: preserve-3d;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    transform-origin: center center;
+}
+
+.front {
+    transform: translateZ(calc(var(--cubeDimension)/2));
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(calc(var(--cubeDimension)/2));
+}
+
+.top {
+
+    transform: rotateX(90deg) translateZ(calc(var(--cubeDimension)/2));
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(calc(var(--cubeDimension)/2));
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(calc(var(--cubeDimension)/2));
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(calc(var(--cubeDimension)/2));
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="assets/js/config.js"></script>
+      <script src="assets/js/Cube.js"></script>
+      <script src="assets/js/renderer.js"></script>
+      <link rel="stylesheet" href="assets/css/style.css">
+
+      <title>Filipe Teixeira's Rubik's Cube Simulator</title>
+
+      <link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico" />
+      <link rel="icon" href="icons/favicon-32x32.png" sizes="32x32" />
+      <link rel="icon" href="icons/favicon-16x16.png" sizes="16x16" />
+      <link rel="shortcut icon" sizes="192x192" href="icons/android-chrome-192x192.png" />
+      <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+
+    </head>
+    <body>
+
+          <div id="hud" class="hud">
+          <span style="display:block;margin-bottom:-20px;font-size:8pt">LEFT AND RIGHT ARROW KEYS, HOME AND END TO NAVIGATE IN THE ALG. CLICK SCREEN AND MOVE MOUSE TO CHANGE ANGLE.</span>
+          <h1 id="mov"></h1> <strong id="alg"></strong>
+        </div>
+          
+        <div id="cube-perspective">
+          <div id="cube-container" class="cube3d">
+            <div id="f1" class="face top"></div>
+            <div id="f2" class="face left"></div>
+            <div id="f3" class="face front"></div>
+            <div id="f4" class="face right"></div>
+            <div id="f5" class="face back"></div>
+            <div id="f6" class="face bottom"></div>
+          </div>
+        </div>
+
+        <div class="hud" id="data-inputs" style="position:absolute;bottom:0;right:0;color:white;">
+          Alg: <textarea class="ignore-click" id="a"></textarea><br/>
+          CubeSize: <input id="c" class="ignore-click" ></input><br/>
+          <label class="is-label">End with solved cube<input class="ignore-click" id="sc" type="checkbox"/></label><br/>
+          <button class="ignore-click" id="r">enviar</button>
+        </div>
+
+        <script>
+          const c = document.getElementById('c');
+          const a = document.getElementById('a');
+          const sc = document.getElementById('sc');
+
+          c.value = cubeSize;
+          a.value = _alg;
+          sc.checked = solveCase;
+
+          function r() {
+            window.location.href = `#${btoa(c.value+';'+a.value+';'+(sc.checked?1:0))}`;
+            window.location.reload();
+          }
+          document.getElementById('r').onclick = r;
+        </script>
+
+    </body>
+</html>
